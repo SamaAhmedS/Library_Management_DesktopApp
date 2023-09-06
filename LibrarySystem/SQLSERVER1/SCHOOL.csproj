@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{563D17C4-9073-4ADE-B539-01B79ED7C1A5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SCHOOL</RootNamespace>
+    <AssemblyName>SCHOOL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Release\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Release\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="IrisSkin2">
+      <HintPath>..\..\Skine Files\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\CLS_J1.cs" />
+    <Compile Include="BL\CLS_LOGIN.cs" />
+    <Compile Include="BL\CLS_PRODUCTS.cs" />
+    <Compile Include="BL\Head.cs" />
+    <Compile Include="Cam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cam.Designer.cs">
+      <DependentUpon>Cam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PL\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PL\CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PL\CrystalReport3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PL\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_OPEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_OPEN.Designer.cs">
+      <DependentUpon>FRM_OPEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\OK_64.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\OK_64.Designer.cs">
+      <DependentUpon>OK_64.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Print1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Print1.Designer.cs">
+      <DependentUpon>Print1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Print2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Print2.Designer.cs">
+      <DependentUpon>Print2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Report_16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Report_16.Designer.cs">
+      <DependentUpon>Report_16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Report_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Report_2.Designer.cs">
+      <DependentUpon>Report_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Report_32.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Report_32.Designer.cs">
+      <DependentUpon>Report_32.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Report_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Report_4.Designer.cs">
+      <DependentUpon>Report_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Report_64.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Report_64.Designer.cs">
+      <DependentUpon>Report_64.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Frm_ServerSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Frm_ServerSetting.Designer.cs">
+      <DependentUpon>Frm_ServerSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\MySqlConnection.cs" />
+    <Compile Include="PL\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Report_8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Report_8.Designer.cs">
+      <DependentUpon>Report_8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Result_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Result_4.Designer.cs">
+      <DependentUpon>Result_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\SHDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\SHDA.Designer.cs">
+      <DependentUpon>SHDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\SHDA2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\SHDA2.Designer.cs">
+      <DependentUpon>SHDA2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\SHDA3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\SHDA3.Designer.cs">
+      <DependentUpon>SHDA3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ShowA1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ShowA1.Designer.cs">
+      <DependentUpon>ShowA1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ShowA2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ShowA2.Designer.cs">
+      <DependentUpon>ShowA2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ShowA3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ShowA3.Designer.cs">
+      <DependentUpon>ShowA3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\SHOWTZ_64z.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\SHOWTZ_64z.Designer.cs">
+      <DependentUpon>SHOWTZ_64z.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\SHOW_16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\SHOW_16.Designer.cs">
+      <DependentUpon>SHOW_16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\SHOW_32.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\SHOW_32.Designer.cs">
+      <DependentUpon>SHOW_32.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\SHOW_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\SHOW_4.Designer.cs">
+      <DependentUpon>SHOW_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\SHOW_64.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\SHOW_64.Designer.cs">
+      <DependentUpon>SHOW_64.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\SHOW_8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\SHOW_8.Designer.cs">
+      <DependentUpon>SHOW_8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\FRM_RPT_PRODUCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FRM_RPT_PRODUCT.Designer.cs">
+      <DependentUpon>FRM_RPT_PRODUCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataAccessLayer.cs" />
+    <Compile Include="dows\Forms.cs" />
+    <Compile Include="PL\components.cs" />
+    <Compile Include="PL\Console.cs" />
+    <Compile Include="PL\FRM_ADD_PRODUCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_ADD_PRODUCT.Designer.cs">
+      <DependentUpon>FRM_ADD_PRODUCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_LOGIN.Designer.cs">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_MAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_MAIN.Designer.cs">
+      <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_PREVIEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_PREVIEW.Designer.cs">
+      <DependentUpon>FRM_PREVIEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_PRODUCTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_PRODUCTS.Designer.cs">
+      <DependentUpon>FRM_PRODUCTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Game1.cs" />
+    <Compile Include="PL\SpriteBatch.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\MediaTypeNames.cs" />
+    <Compile Include="WMPLib\WindowsMediaPlayer.cs" />
+    <EmbeddedResource Include="Cam.resx">
+      <DependentUpon>Cam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_OPEN.resx">
+      <DependentUpon>FRM_OPEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\OK_64.resx">
+      <DependentUpon>OK_64.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Print1.resx">
+      <DependentUpon>Print1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Print2.resx">
+      <DependentUpon>Print2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Report_16.resx">
+      <DependentUpon>Report_16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Report_2.resx">
+      <DependentUpon>Report_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Report_32.resx">
+      <DependentUpon>Report_32.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Report_4.resx">
+      <DependentUpon>Report_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Report_64.resx">
+      <DependentUpon>Report_64.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_ADD_PRODUCT.ar-EG.resx">
+      <DependentUpon>FRM_ADD_PRODUCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_ADD_PRODUCT.en.resx">
+      <DependentUpon>FRM_ADD_PRODUCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Frm_ServerSetting.resx">
+      <DependentUpon>Frm_ServerSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Report_8.resx">
+      <DependentUpon>Report_8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Result_4.resx">
+      <DependentUpon>Result_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SHDA.resx">
+      <DependentUpon>SHDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SHDA2.resx">
+      <DependentUpon>SHDA2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SHDA3.resx">
+      <DependentUpon>SHDA3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ShowA1.resx">
+      <DependentUpon>ShowA1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ShowA2.resx">
+      <DependentUpon>ShowA2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ShowA3.resx">
+      <DependentUpon>ShowA3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SHOWTZ_64z.resx">
+      <DependentUpon>SHOWTZ_64z.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SHOW_16.resx">
+      <DependentUpon>SHOW_16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SHOW_32.resx">
+      <DependentUpon>SHOW_32.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SHOW_4.resx">
+      <DependentUpon>SHOW_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SHOW_64.ar.resx">
+      <DependentUpon>SHOW_64.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SHOW_64.en-IN.resx">
+      <DependentUpon>SHOW_64.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SHOW_64.resx">
+      <DependentUpon>SHOW_64.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SHOW_8.resx">
+      <DependentUpon>SHOW_8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FRM_RPT_PRODUCT.resx">
+      <DependentUpon>FRM_RPT_PRODUCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_ADD_PRODUCT.resx">
+      <DependentUpon>FRM_ADD_PRODUCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_LOGIN.resx">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_MAIN.resx">
+      <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_PREVIEW.resx">
+      <DependentUpon>FRM_PREVIEW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_PRODUCTS.resx">
+      <DependentUpon>FRM_PRODUCTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="task.xlsx" />
+    <None Include="task1.xlsx" />
+    <None Include="task2.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\123.bmp" />
+    <None Include="Resources\3.jpg" />
+    <None Include="bin\Debug\img\Run 2 - Copy.jpg" />
+    <None Include="bin\Debug\img\Run 3.jpg" />
+    <None Include="bin\Debug\img\1414.bmp" />
+    <Content Include="ElectronicArbitration1.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ElectronicArbitration2.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\4.png" />
+    <None Include="Resources\7.png" />
+    <None Include="Resources\21.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\80E.png" />
+    <None Include="Resources\6.png" />
+    <None Include="Resources\Run 2 - Copy.png" />
+    <None Include="Resources\Run 2 - Copy.jpg" />
+    <None Include="Resources\Run 2.ico" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\10 - Copy.jpg" />
+    <None Include="Resources\9.png" />
+    <None Include="Resources\IMG_20180720_112555.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
